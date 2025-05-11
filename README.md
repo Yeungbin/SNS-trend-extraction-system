@@ -93,53 +93,54 @@ Interactive visualization was implemented, allowing users to click on individual
 
 ### 4-2. Community Topics and Keyword Extraction
 
-<table border="1">
-  <thead>
-    <tr>
-      <th>Community ID</th>
-      <th>Number of Nodes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Community 53</td>
-      <td>87</td>
-    </tr>
-    <tr>
-      <td>Community 21</td>
-      <td>81</td>
-    </tr>
-    <tr>
-      <td>Community 10</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <td>Community 14</td>
-      <td>76</td>
-    </tr>
-    <tr>
-      <td>Community 17</td>
-      <td>76</td>
-    </tr>
-    <tr>
-      <td>Community 2</td>
-      <td>73</td>
-    </tr>
-    <tr>
-      <td>Community 7</td>
-      <td>72</td>
-    </tr>
-    <tr>
-      <td>Community 27</td>
-      <td>72</td>
-    </tr>
-    <tr>
-      <td>Community 23</td>
-      <td>71</td>
-    </tr>
-  </tbody>
-</table>
-
+<p align="center">
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Community ID</th>
+        <th>Number of Nodes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Community 53</td>
+        <td>87</td>
+      </tr>
+      <tr>
+        <td>Community 21</td>
+        <td>81</td>
+      </tr>
+      <tr>
+        <td>Community 10</td>
+        <td>80</td>
+      </tr>
+      <tr>
+        <td>Community 14</td>
+        <td>76</td>
+      </tr>
+      <tr>
+        <td>Community 17</td>
+        <td>76</td>
+      </tr>
+      <tr>
+        <td>Community 2</td>
+        <td>73</td>
+      </tr>
+      <tr>
+        <td>Community 7</td>
+        <td>72</td>
+      </tr>
+      <tr>
+        <td>Community 27</td>
+        <td>72</td>
+      </tr>
+      <tr>
+        <td>Community 23</td>
+        <td>71</td>
+      </tr>
+    </tbody>
+  </table>
+</p>
 
 <p align="center">
   <img src="src/Community Topics and Keyword Extraction.png" alt="Community Topics and Keyword Extraction" width="800"/>
@@ -153,6 +154,5 @@ Additionally, by leveraging the Cross Attention method, the top five nodes most 
 This approach provides a robust foundation for analyzing and predicting the key interests and trends of each community, aiding in effective trend tracking and forecasting.
 
 <p align="center">
-  <img src="src/Panel.png" alt="Panel" width="800"/>
+  <img src="src/Panel.webp" alt="Panel" width="800"/>
 </p>
-<p align="center"><sub>Panel</sub></p>
