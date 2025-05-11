@@ -83,9 +83,6 @@ def build_hashtag_edges(df_post):
 
     return list(edges_hashtag_limited)
 
-# ------------------------
-# 디스크립션 엣지 생성
-# ------------------------
 
 def build_description_edges(df_post, model_name="Twitter/twhin-bert-base"):
     post_ids = df_post['post_id'].astype(str).tolist()
