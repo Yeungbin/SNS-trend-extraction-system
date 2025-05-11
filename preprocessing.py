@@ -6,9 +6,6 @@ import torch
 from sklearn.metrics.pairwise import cosine_similarity
 from transformers import AutoTokenizer, AutoModel
 
-# ------------------------
-# 해시태그 관련 함수
-# ------------------------
 
 def split_hashtags(hashtag_str):
     if isinstance(hashtag_str, str):
@@ -42,9 +39,6 @@ def clean_hashtags(hashtag_list):
 def remove_hashtags(hashtags, keywords):
     return [tag for tag in hashtags if not any(keyword in tag.lower() for keyword in keywords)]
 
-# ------------------------
-# 전처리 메인 함수
-# ------------------------
 
 def preprocess_posts(filepath):
     df_post = pd.read_csv(filepath)
@@ -65,9 +59,6 @@ def preprocess_posts(filepath):
 
     return df_post
 
-# ------------------------
-# 해시태그 엣지 생성
-# ------------------------
 
 def build_hashtag_edges(df_post):
     post_hashtags = df_post[['post_id', 'filtered_hashtags']].dropna(subset=['filtered_hashtags'])
