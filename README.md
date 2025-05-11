@@ -93,54 +93,57 @@ Interactive visualization was implemented, allowing users to click on individual
 
 ### 4-2. Community Topics and Keyword Extraction
 
-<p align="center">
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Community ID</th>
-        <th>Number of Nodes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Community 53</td>
-        <td>87</td>
-      </tr>
-      <tr>
-        <td>Community 21</td>
-        <td>81</td>
-      </tr>
-      <tr>
-        <td>Community 10</td>
-        <td>80</td>
-      </tr>
-      <tr>
-        <td>Community 14</td>
-        <td>76</td>
-      </tr>
-      <tr>
-        <td>Community 17</td>
-        <td>76</td>
-      </tr>
-      <tr>
-        <td>Community 2</td>
-        <td>73</td>
-      </tr>
-      <tr>
-        <td>Community 7</td>
-        <td>72</td>
-      </tr>
-      <tr>
-        <td>Community 27</td>
-        <td>72</td>
-      </tr>
-      <tr>
-        <td>Community 23</td>
-        <td>71</td>
-      </tr>
-    </tbody>
-  </table>
-</p>
+<div align="center">
+
+<table style="width: 80%; text-align: center;">
+  <thead>
+    <tr>
+      <th>Community ID</th>
+      <th>Number of Nodes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Community 53</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td>Community 21</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td>Community 10</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>Community 14</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td>Community 17</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td>Community 2</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td>Community 7</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td>Community 27</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td>Community 23</td>
+      <td>71</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
 
 <p align="center">
   <img src="src/Community Topics and Keyword Extraction.png" alt="Community Topics and Keyword Extraction" width="800"/>
