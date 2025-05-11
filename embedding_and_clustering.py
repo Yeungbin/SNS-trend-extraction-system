@@ -4,9 +4,6 @@ from sklearn.manifold import TSNE
 from sklearn.metrics.pairwise import cosine_similarity
 from igraph import Graph
 
-# ----------------------------
-# Transformer Block 정의
-# ----------------------------
 
 class TransformerBlock(torch.nn.Module):
     def __init__(self, input_dim, num_heads=8):
@@ -25,9 +22,6 @@ class TransformerBlock(torch.nn.Module):
         query = query + ffn_output
         return query
 
-# ----------------------------
-# Transformer Block 적용 함수
-# ----------------------------
 
 def apply_transformer_blocks(query_vectors, key_value_vectors, num_blocks=3, input_dim=64):
     query_vectors = torch.tensor(query_vectors, dtype=torch.float32).unsqueeze(0)
@@ -38,26 +32,17 @@ def apply_transformer_blocks(query_vectors, key_value_vectors, num_blocks=3, inp
         query_vectors = block(query_vectors, key_value_vectors, key_value_vectors)
     return query_vectors.squeeze(0).detach().numpy()
 
-# ----------------------------
-# 유사한 디스크립션/해시태그 추출 함수
-# ----------------------------
 
 def get_closest_descriptions(rep_vector, community_vectors, descriptions, hashtags, top_k=3):
     similarities = cosine_similarity([rep_vector], community_vectors)[0]
     top_indices = np.argsort(similarities)[::-1][:top_k]
     return [(descriptions[idx], hashtags[idx]) for idx in top_indices]
 
-# ----------------------------
-# t-SNE 차원 축소
-# ----------------------------
 
 def reduce_embeddings(valid_embeddings):
     tsne = TSNE(n_components=64, random_state=42, method='exact')
     return tsne.fit_transform(valid_embeddings)
 
-# ----------------------------
-# 커뮤니티 분석 메인 함수
-# ----------------------------
 
 def analyze_communities(g, df_post, valid_embeddings, valid_post_ids, sorted_communities):
     reduced_embeddings = reduce_embeddings(valid_embeddings)
