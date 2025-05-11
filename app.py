@@ -6,20 +6,11 @@ from preprocessing import preprocess_posts, build_hashtag_edges, build_descripti
 from embedding_and_clustering import analyze_communities
 from visualization import summarize_and_visualize_communities
 
-# -------------------------------
-# Step 1: 데이터 전처리
-# -------------------------------
 df_post = preprocess_posts(DATA_PATH)
 
-# -------------------------------
-# Step 2: 엣지 생성
-# -------------------------------
 edges_hashtag = build_hashtag_edges(df_post)
 edges_description, valid_embeddings, valid_post_ids = build_description_edges(df_post, model_name=MODEL_NAME)
 
-# -------------------------------
-# Step 3: 네트워크 생성
-# -------------------------------
 post_ids = df_post['post_id'].astype(str).tolist()
 
 g = Graph()
@@ -30,9 +21,6 @@ g.add_edges([(str(e[0]), str(e[1])) for e in edges_hashtag])
 g.vs['like_count'] = df_post['like_count'].fillna(0).astype(int).tolist()
 g.vs['save_count'] = df_post['save_count'].fillna(0).astype(int).tolist()
 
-# -------------------------------
-# Step 4: 커뮤니티 탐지 및 필터링
-# -------------------------------
 random.seed(42)
 np.random.seed(42)
 
@@ -52,9 +40,6 @@ print("Sorted Communities by Size (Filtered):")
 for cid, size in sorted_communities:
     print(f"Community {cid}: {size} nodes")
 
-# -------------------------------
-# Step 5: 커뮤니티 분석 및 시각화
-# -------------------------------
 community_analysis = analyze_communities(
     g,
     df_post,
